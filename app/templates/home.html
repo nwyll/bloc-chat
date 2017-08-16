@@ -1,14 +1,17 @@
 <main class="home-view">
-  <div class="side-bar">
+  <div class="side-bar col-sm-4">
     <h1>Bloc Chat</h1>
     <ul class="home-view-room-list">
       <li class="home-view-room-item" ng-repeat="room in home.rooms">
         {{ room.$value }}
       </li>
+      <li>
+        <button type="button" class="btn btn-default" ng-click="modal.open()">New Room</button>
+      </li>
     </ul>
   </div>
-  <div class="chat-space">
-    
+  <div class="chat-space col-sm-8">
+
   </div>
-  
+
 </main>
