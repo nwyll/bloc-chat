@@ -1,4 +1,9 @@
 (function() {
+    /**
+    * @function config
+    * @desc Configurs the module setting up the $locationProvider and $stateProvider.
+    * @param $locationProvider, $stateProvider
+    */
     function config($locationProvider, $stateProvider) {
          $locationProvider
              .html5Mode({
