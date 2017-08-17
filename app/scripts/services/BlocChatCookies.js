@@ -13,7 +13,6 @@
         controller: 'UsernameModalInstanceCtrl as usernameModalInstance'
       })
     }
-    
   }
 
   angular

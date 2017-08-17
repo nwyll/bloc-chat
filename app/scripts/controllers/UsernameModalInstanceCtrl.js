@@ -10,8 +10,10 @@
       * @desc Set a username.
       */
       this.setUsername = function() {
-        $uibModalInstance.close(this.username);
-        $cookies.put('blocChatCurrentUser', this.username);
+        if (this.username) {
+          $uibModalInstance.close(this.username);
+          $cookies.put('blocChatCurrentUser', this.username);
+        }
       }
     }
 
