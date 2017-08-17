@@ -1,0 +1,14 @@
+<div>
+  <div class="modal-header">
+      <h2 class="modal-title">Set your username</h2>
+  </div>
+  <div class="modal-body">
+    <p>This is the name that will appear when you send messages.</p>
+    <form name="add-username">
+      <input type="text" class="form-control" ng-model="modalInstance.room" placeholder="Enter your name ..." autofocus>
+    </form>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-default" ng-click="modalInstance.createRoom()">Set username</button>
+  </div>
+</div>
