@@ -1,22 +1,27 @@
 (function() {
-  //Room callback function with $firebaseArray injected as a dependency
+  /**
+  * @function Room
+  * @desc Creates a list of chat rooms.
+  * @param $firebaseArray
+  * @returns { Room } Array of the rooms in the database.
+  */
   function Room($firebaseArray) {
-    //create an empty Room object
+
     var Room = {};
-    //creates a reference to our rooms database
     var ref = firebase.database().ref().child("rooms");
-    //rooms uses the $firebaseArray service to make ref an array
     var rooms = $firebaseArray(ref);
 
-    //append rooms to the Room object as Room.all
     Room.all = rooms;
 
-    //creating a add method to insulate the firebase $add method
+    /**
+    * @function Room.add
+    * @desc Adds a room to the database.
+    * @param { room }
+    */
     Room.add = function(room) {
       rooms.$add(room)
     };
 
-    //return the Room object that now contains an array of the rooms in the database
     return Room;
   }
 
