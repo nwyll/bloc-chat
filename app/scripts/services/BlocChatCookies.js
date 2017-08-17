@@ -9,7 +9,7 @@
     if (!currentUser || currentUser === '') {
       $uibModal.open({
         templateUrl: '/templates/usernameModal.html',
-        controller: 'ModalInstanceCtrl as modalInstance'
+        controller: 'UsernameModalInstanceCtrl as usernameModalInstance'
       })
     }
   }
