@@ -1,10 +1,10 @@
 (function() {
     /**
-    * @function ModalInstanceCtrl
-    * @desc Controls actions once modal is open.
+    * @function RoomModalInstanceCtrl
+    * @desc Controls actions to create a new room once modal is open.
     * @param $uibModalInstance, Room service
     */
-    function ModalInstanceCtrl($uibModalInstance, Room) {
+    function RoomModalInstanceCtrl($uibModalInstance, Room) {
       /**
       * @function cancel
       * @desc Closes the modal.
@@ -25,5 +25,5 @@
 
     angular
         .module('blocChat')
-        .controller('ModalInstanceCtrl', ['$uibModalInstance', 'Room', ModalInstanceCtrl]);
+        .controller('RoomModalInstanceCtrl', ['$uibModalInstance', 'Room', RoomModalInstanceCtrl]);
 })();

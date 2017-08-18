@@ -7,8 +7,8 @@
           <a class="room-name" ng-click="home.openRoom(room)">{{ room.$value }}</a>
         </li>
       </ul>
-      <div class="add-room" ng-controller="ModalCtrl as modal">
-        <button type="button" class="btn btn-default" ng-click="modal.open()">New Room</button>
+      <div class="add-room" ng-controller="RoomModalCtrl as roomModal">
+        <button type="button" class="btn btn-default" ng-click="roomModal.open()">New Room</button>
       </div>
     </nav>
     <section class="chat-space col-xs-8">

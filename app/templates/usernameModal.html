@@ -1,0 +1,15 @@
+<div>
+  <div class="modal-header">
+      <h2 class="modal-title">Set your username</h2>
+  </div>
+  <div class="modal-body">
+    <p>This is the name that will appear when you send messages.</p>
+    <form name="add-username" ng-submit="usernameModalInstance.setUsername()">
+      <input type="text" class="form-control" ng-model="usernameModalInstance.username" placeholder="Enter your name ..." autofocus>
+      <input type="submit" style="display: none;">
+    </form>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-default" ng-click="usernameModalInstance.setUsername()">Set Username</button>
+  </div>
+</div>
