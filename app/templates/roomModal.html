@@ -4,12 +4,12 @@
     </div>
     <div class="modal-body">
       <form name="add-room" ng-submit="roomModalInstance.createRoom()">
-        <input type="text" class="form-control" id="keyListener" ng-model="roomModalInstance.room" title="room" placeholder="Enter room name ..." autofocus>
+        <input type="text" class="form-control"  ng-model="roomModalInstance.room" title="room" placeholder="Enter room name ..." autofocus>
         <input type="submit" style="display: none;">
       </form>
     </div>
     <div class="modal-footer">
         <button class="btn btn-warning" type="button"  ng-click="roomModalInstance.cancel()">Cancel</button>
-        <button type="button" class="btn btn-default" id="go" ng-click="roomModalInstance.createRoom()">Create Room</button>
+        <button type="button" class="btn btn-default"  ng-click="roomModalInstance.createRoom()">Create Room</button>
     </div>
 </div>
