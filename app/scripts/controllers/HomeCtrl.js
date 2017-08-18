@@ -14,11 +14,19 @@
     * @param { room } Room object holds $value(name) & $id
     */
     this.openRoom = function(room) {
-      var currentRoom = room;
+      this.currentRoom = room;
+      this.currentRoomName = this.currentRoom.$value
+      this.roomMessages = Message.getByRoomId(this.currentRoom.$id);
+    };
 
-      this.currentRoomName = currentRoom.$value
-      this.roomMessages = Message.getByRoomId(currentRoom.$id);
-    }
+    this.send = function(room) {
+
+      Message.addMessage({
+        roomId: this.currentRoom.$id,
+        content: this.newMessage,
+        username: "test",
+      });
+    };
   }
 
   angular
