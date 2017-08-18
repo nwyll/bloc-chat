@@ -19,6 +19,12 @@
           <p class="message-item-content">{{ message.content }}</p>
         </div>
       </div>
+      <div class="send-message">
+        <form name="add-message" ng-submit="message.add()">
+          <input type="text" class="form-control" ng-model="message.newMessage" placeholder="Write your message here ..." autofocus>
+          <button type="submit" class="btn btn-default" ng-click="message.add()">Send</button>
+        </form>
+      </div>
     </section>
   </div>
 </main>
