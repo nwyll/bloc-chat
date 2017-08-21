@@ -2,19 +2,19 @@
   /**
   * @function TimeFilter
   * @desc Service to format time.
-  * @param
-  * @returns
+  * @returns anonymous function
   */
   function TimeFilter() {
     /**
-    * @function filterTime
+    * @function anonymous
     * @desc Filters the sentAt time to hh:mm am/pm.
-    * @param { time } new Date object
+    * @returns formattedTime
     */
-    return function(time) {
+    return function() {
+      var currentTime = new Date();
 
-      var hours = time.getHours(),
-          mins = time.getMinutes();
+      var hours = currentTime.getHours(),
+          mins = currentTime.getMinutes();
 
       var formattedTime;
 

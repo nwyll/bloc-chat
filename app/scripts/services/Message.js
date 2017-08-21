@@ -19,12 +19,10 @@
       */
       Message.getByRoomId = function(roomId) {
         var roomMessages = $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
-        //console.log(roomMessages);
         return roomMessages;
       };
 
       Message.addMessage = function(message) {
-        console.log(message);
         messages.$add(message);
       };
 

@@ -26,12 +26,10 @@
     * @desc Sends current message to firebase
     */
     this.send = function() {
-      var currentTime = new Date();
-
-      Message.addMessage({
+        Message.addMessage({
         roomId: this.currentRoom.$id,
         content: this.newMessage,
-        sentAt: TimeFilter(currentTime),
+        sentAt: TimeFilter(),
         username: currentUser
       });
       this.newMessage = "";
