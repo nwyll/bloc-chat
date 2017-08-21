@@ -2,9 +2,9 @@
   /**
   * @function HomeCtrl
   * @desc Sets room list and displays current room messages.
-  * @param Room service, Message service, $cookies
+  * @param Room service, Message service, TimeFilter service, $cookies
   */
-  function HomeCtrl(Room, Message, $cookies) {
+  function HomeCtrl(Room, Message, TimeFilter, $cookies) {
 
     var currentUser = $cookies.get('blocChatCurrentUser');
 
@@ -26,15 +26,19 @@
     * @desc Sends current message to firebase
     */
     this.send = function() {
+      var currentTime = new Date();
+
       Message.addMessage({
         roomId: this.currentRoom.$id,
         content: this.newMessage,
-        username: currentUser,
+        sentAt: TimeFilter(currentTime),
+        username: currentUser
       });
+      this.newMessage = "";
     };
   }
 
   angular
       .module('blocChat')
-      .controller('HomeCtrl', ['Room', 'Message', '$cookies', HomeCtrl]);
+      .controller('HomeCtrl', ['Room', 'Message', 'TimeFilter', '$cookies',HomeCtrl]);
 })();

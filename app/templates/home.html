@@ -15,7 +15,9 @@
       <h1>{{ home.currentRoomName }}</h1>
       <div class="message-list container">
         <div class="message-item" ng-repeat="message in home.roomMessages track by $index">
-          <p class="message-item-username">{{ message.username }} <span class="message-item-timestamp">{{ message.sentAt }}</span></p>
+          <p class="message-item-username">{{ message.username }}
+              <span class="message-item-timestamp">{{ message.sentAt }}</span>
+          </p>
           <p class="message-item-content">{{ message.content }}</p>
         </div>
       </div>
